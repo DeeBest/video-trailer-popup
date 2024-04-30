@@ -12,17 +12,17 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #9ad3fe;
+  background-color: #e3f0faa9;
   color: #111930;
 }
 header,
 main,
 footer {
   min-width: 100%;
-  padding: 20px;
+  padding: 5px 10px;
 }
 header {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.8);
 }
 main {
@@ -34,7 +34,7 @@ main {
   justify-content: center;
 }
 footer {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 550;
   display: flex;
   flex-direction: column;
@@ -62,4 +62,82 @@ footer .contact-icons {
   opacity: 0.7;
   box-shadow: none;
   transform: scale(0.98);
+}
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  max-width: 400px;
+  gap: 7px;
+}
+
+#main-container img {
+  max-width: 100%;
+  border: none;
+  border-radius: 20px;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 570;
+  text-shadow: 1px 2px 11px rgba(0, 0, 0, 0.8);
+}
+#main-container p {
+  font-size: 1.05rem;
+  line-height: 15px;
+  font-weight: 550;
+  text-align: left;
+}
+button {
+  padding: 6px 12px;
+  font-size: 1rem;
+  font-weight: 560;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+button:hover {
+  box-shadow: none;
+  transform: scale(0.95);
+}
+#trailer-video-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111930;
+}
+video {
+  position: relative;
+  max-width: 900px;
+  outline: none;
+}
+#trailer-video-container img {
+  width: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+#trailer-video-container img:hover {
+  transform: scale(0.92);
+  opacity: 0.8;
+}
+#trailer-video-container.active {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 990px) {
+  #trailer-video-container video {
+    max-width: 90%;
+  }
 }
