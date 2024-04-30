@@ -75,7 +75,7 @@ footer .contact-icons {
 #main-container img {
   max-width: 100%;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 h3 {
   font-size: 1.2rem;
@@ -114,6 +114,9 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: #111930;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
 }
 video {
   position: relative;
@@ -133,7 +136,8 @@ video {
   opacity: 0.8;
 }
 #trailer-video-container.active {
-  visibility: hidden;
+  visibility: visible;
+  opacity: 1;
 }
 
 @media screen and (max-width: 990px) {
